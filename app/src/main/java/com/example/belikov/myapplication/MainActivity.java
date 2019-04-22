@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity
 
         LinearLayout llBottomSheet = findViewById(R.id.bottom_sheet);
         BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(llBottomSheet);
-        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED);
 
         View.OnClickListener snackbarOnClickListener = new View.OnClickListener() {
             @Override public void onClick(View view) {
