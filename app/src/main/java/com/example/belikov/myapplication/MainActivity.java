@@ -1,6 +1,7 @@
 package com.example.belikov.myapplication;
 
 import android.os.Bundle;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -12,9 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private Snackbar mSnackbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,23 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        LinearLayout llBottomSheet = findViewById(R.id.bottom_sheet);
+        BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(llBottomSheet);
+        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+
+        View.OnClickListener snackbarOnClickListener = new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                Toast toast = Toast.makeText(MainActivity.this, "ACTION", Toast.LENGTH_SHORT);
+                toast.show();
+                mSnackbar.dismiss();
+            }
+        };
+
+        mSnackbar = Snackbar.make((View)findViewById(R.id.drawer_layout), "Snackbar", Snackbar.LENGTH_LONG);
+        mSnackbar.setDuration(2500);
+        mSnackbar.setAction("ACTION", snackbarOnClickListener);
+        mSnackbar.show();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
