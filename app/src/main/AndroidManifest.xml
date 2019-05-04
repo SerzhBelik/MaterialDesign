@@ -10,14 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".homework4.Main4Activity"
-            android:label="@string/title_activity_main4"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity
-            android:name=".homework4.ToolbarActivity"
-            android:label="@string/title_activity_toolbar"
+            android:name=".homework4.CollapsingActivity"
+            android:label="@string/title_activity_collapsing"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
