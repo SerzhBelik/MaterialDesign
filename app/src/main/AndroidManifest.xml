@@ -13,6 +13,12 @@
             android:name=".homework4.CollapsingActivity"
             android:label="@string/title_activity_collapsing"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".homework4.RecyclerActivity"
+            android:label="@string/title_activity_recycler"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
