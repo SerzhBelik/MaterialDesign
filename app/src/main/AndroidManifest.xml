@@ -20,17 +20,22 @@
         <activity
             android:name=".homework4.TabActivity"
             android:label="@string/title_activity_tab"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".homework4.BottomActivity"
             android:label="@string/title_activity_bottom"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".homework4.hw8.StyleActivity"
             android:label="@string/title_activity_style"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".homework4.hw8.ThemeActivity"
+            android:label="@string/title_activity_theme"
+            android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
